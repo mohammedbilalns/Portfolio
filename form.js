@@ -67,6 +67,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
       .then(function (response) {
         // Check if the request was successful
         if (response) {
+          console.log(response)
           return response; 
         } else {
           throw new Error("Failed to submit the form.");
