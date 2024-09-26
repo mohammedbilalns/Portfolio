@@ -18,7 +18,10 @@ document.getElementById("form").addEventListener("submit", function (e) {
   if (name === "") {
     document.getElementById("nameError").innerText = "Name is required.";
     isValid = false;
-  }
+  }else if (/^\d/.test(name)) {
+    document.getElementById("nameError").innerText = "The first character should not be a number.";
+    isValid = false;
+}
 
   // check email pattern
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
